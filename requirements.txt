@@ -1,0 +1,14 @@
+pandas
+Pillow
+pymongo
+snscrape
+streamlit
+streamlit-option-menu
+google-auth
+imbalanced-learn
+matplotlib
+seaborn
+numpy
+scikit-learn
+joblib
+wordcloud
