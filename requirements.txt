@@ -16,3 +16,6 @@ tqdm
 oauth2client
 google-api-python-client
 sastrawi
+emoji
+tensorflow
+gensim
