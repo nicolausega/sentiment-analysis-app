@@ -13,3 +13,6 @@ scikit-learn
 joblib
 wordcloud
 tqdm
+oauth2client
+google-api-python-client
+sastrawi
