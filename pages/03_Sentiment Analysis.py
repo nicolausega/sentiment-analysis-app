@@ -239,6 +239,7 @@ else:
         href = f'<a href="data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,{b64}" download="predicted_data.xlsx">Click here to download the predicted data as Excel file</a>'
         st.markdown(href, unsafe_allow_html=True)
 
+        #
         # Function to save all the visualizations as a PDF
         def save_visualizations_as_pdf(df):
 
