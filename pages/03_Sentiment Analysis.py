@@ -223,13 +223,27 @@ else:
         #display_ngrams(df)
         #display_wordcloud(df)
 
+        # Assuming you have already loaded and processed your dataframe 'df'
+        df = session_state["df"]
+
+        # Display the DataFrame in Streamlit
+        st.subheader("Predicted Data Table:")
+        st.dataframe(df[selected_columns])
+
+        # Offer the Excel file for download
+        excel_file = BytesIO()
+        df[selected_columns].to_excel(excel_file, index=False, engine='xlsxwriter')
+        excel_file.seek(0)
+        b64 = base64.b64encode(excel_file.read()).decode()
+        href = f'<a href="data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,{b64}" download="predicted_data.xlsx">Click here to download the predicted data as Excel file</a>'
+        st.markdown(href, unsafe_allow_html=True)
+
         # Function to save all the visualizations as a PDF
         def save_visualizations_as_pdf(df):
 
             # Save the visualizations as a PDF file
             pdf_bytes = BytesIO()
             with PdfPages(pdf_bytes) as pdf:
-                display_dataframe_table(df)
                 display_sentiment_conclusion(df)
                 display_pie_chart(df)
                 display_sentiment_graph(df)
