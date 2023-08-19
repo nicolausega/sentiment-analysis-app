@@ -19,3 +19,4 @@ sastrawi
 emoji
 tensorflow
 gensim
+XlsxWriter
