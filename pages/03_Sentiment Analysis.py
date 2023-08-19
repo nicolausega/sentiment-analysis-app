@@ -33,6 +33,7 @@ import matplotlib.dates as mdates
 import matplotlib.backends.backend_pdf as pdf_backend
 from io import BytesIO
 from matplotlib.backends.backend_pdf import PdfPages
+import xlsxwriter
 
 # Sidebar menu options
 st.sidebar.image("images/logo.png", use_column_width=True)
